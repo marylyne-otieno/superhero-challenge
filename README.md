@@ -12,6 +12,10 @@ This is a Flask-based RESTful API for managing superheroes and their powers. The
 This project was built as part of the Phase 4 Code Challenge.
 
 
+## 👩‍💻 Author
+
+**Marylyne Otieno**
+[GitHub Profile](https://github.com/marylyne-otieno)
 
 
 
