@@ -1,7 +1,7 @@
 
-# app/__init__.py
 from flask import Flask
 from app.extensions import db, migrate
+from flask_restful import Api
 
 def create_app():
     app = Flask(__name__)
@@ -10,9 +10,10 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app, db)
 
-    from app import models
+    from . import models
+    from .resources import register_resources
 
-    from app.routes import api
-    app.register_blueprint(api)
+    api = Api(app)
+    register_resources(api)
 
     return app
